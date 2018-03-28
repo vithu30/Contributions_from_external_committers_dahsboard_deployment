@@ -42,11 +42,11 @@ public class HttpHandler {
     private String backendUsername;
     private String backendUrl;
 
-
+//
     public HttpHandler() {
         PropertyReader propertyReader = new PropertyReader();
-        this.backendPassword = propertyReader.getBackendPassword();
-        this.backendUsername = propertyReader.getBackendUsername();
+//        this.backendPassword = propertyReader.getBackendPassword();
+//        this.backendUsername = propertyReader.getBackendUsername();
         this.backendUrl = propertyReader.getBackendUrl();
     }
 
@@ -54,8 +54,8 @@ public class HttpHandler {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet(this.backendUrl + url);
         request.addHeader("Accept", "application/json");
-        String encodedCredentials = this.encode(this.backendUsername + ":" + this.backendPassword);
-        request.addHeader("Authorization", "Basic " + encodedCredentials);
+//        String encodedCredentials = this.encode(this.backendUsername + ":" + this.backendPassword);
+//        request.addHeader("Authorization", "Basic " + encodedCredentials);
         String responseString = null;
 
         try {

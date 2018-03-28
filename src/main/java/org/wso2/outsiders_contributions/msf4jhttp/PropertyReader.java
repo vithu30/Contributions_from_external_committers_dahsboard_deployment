@@ -58,8 +58,8 @@ public class PropertyReader {
         try {
             prop.load(input);
             this.backendUrl = prop.getProperty("backend_url");
-            this.backendPassword = prop.getProperty("backend_password");
-            this.backendUsername = prop.getProperty("backend_username");
+//            this.backendPassword = prop.getProperty("backend_password");
+//            this.backendUsername = prop.getProperty("backend_username");
             this.ssoKeyStoreName = prop.getProperty("sso_keystore_file_name");
             this.ssoKeyStorePassword = prop.getProperty("sso_keystore_password");
             this.ssoCertAlias = prop.getProperty("sso_certificate_alias");
